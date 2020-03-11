@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace WpfApp1.Klasy
@@ -17,6 +18,14 @@ namespace WpfApp1.Klasy
             pracownicy = new Baza_Pracownikow();
             zdarzenia = new Baza_Zdarzen();
 
+            try 
+            { 
+
+            }
+            catch(Exception e)
+            {
+
+            }
 
             pomocnik_zdarzenie = new Zdarzenie(zdarzenia.ilosc_zdarzen);
             pomocnik_pracownik = new Pracownik(pracownicy.ilosc);
