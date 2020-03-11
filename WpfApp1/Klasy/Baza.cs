@@ -13,13 +13,17 @@ namespace WpfApp1.Klasy
         Zdarzenie pomocnik_zdarzenie;
         Pracownik pomocnik_pracownik;
 
+        string lok_zdarzenia;
+        string lok_pracownicy;
+
         Baza()
         {
             pracownicy = new Baza_Pracownikow();
             zdarzenia = new Baza_Zdarzen();
 
             try 
-            { 
+            {
+                var path = @"data.txt";
 
             }
             catch(Exception e)
