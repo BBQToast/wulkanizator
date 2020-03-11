@@ -24,7 +24,7 @@ namespace WpfApp1.Klasy
             try 
             {
                 var path = @"data.txt";
-
+                string[] lines = File.ReadAllLines(path, Encoding.UTF8);
             }
             catch(Exception e)
             {
