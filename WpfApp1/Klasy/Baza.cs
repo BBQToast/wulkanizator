@@ -40,5 +40,17 @@ namespace WpfApp1.Klasy
             pomocnik_zdarzenie = new Zdarzenie(zdarzenia.ilosc_zdarzen);
             pomocnik_pracownik = new Pracownik(pracownicy.ilosc);
         }
+
+        public void zapis ()
+        {
+            pracownicy.zapis();
+            zdarzenia.zapis();
+        }
+
+        public void odczyt ()
+        {
+            pracownicy.odczyt();
+            zdarzenia.odczyt();
+        }
     }
 }
