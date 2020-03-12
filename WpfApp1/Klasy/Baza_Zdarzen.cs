@@ -18,14 +18,12 @@ namespace WpfApp1.Klasy
 {
     class Baza_Zdarzen
     {
-        public string nazwa_pliku;
-        public string lokacja_pliku;
+        public string lokalizacja { get; private set; }
         public int ilosc_zdarzen{ get; private set; }
         public List<Zdarzenie> zdarzenia = new List<Zdarzenie>();
         public Baza_Zdarzen()
         {
-            nazwa_pliku = "Zdarzenia";
-            lokacja_pliku = "";
+            lokalizacja = "Zdarzenia";
             ilosc_zdarzen = 0;
         }
         public void dodaj_zdarzenie (Zdarzenie zdarzenie)
@@ -104,19 +102,14 @@ namespace WpfApp1.Klasy
             }
             ilosc_zdarzen = zdarzenia.Count;
         }
-
-        public string plik()
+        private string plik()
         {
-            string tmp;
-            if (lokacja_pliku == "")
-            {
-                tmp = @""+nazwa_pliku + ".xml";
-            }
-            else
-            {
-                tmp = @""+lokacja_pliku + "\\" + nazwa_pliku + ".xml";
-            }
-            return tmp;
+            return "@"+lokalizacja;
+        }
+
+        public void plik (string a)
+        {
+            lokalizacja = a;
         }
     }
 }

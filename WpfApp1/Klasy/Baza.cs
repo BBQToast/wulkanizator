@@ -25,6 +25,12 @@ namespace WpfApp1.Klasy
             {
                 var path = @"data.txt";
                 string[] lines = File.ReadAllLines(path, Encoding.UTF8);
+
+                pracownicy.plik(lines[0]);
+                zdarzenia.plik(lines[1]);
+
+                pracownicy.odczyt();
+                zdarzenia.odczyt();
             }
             catch(Exception e)
             {

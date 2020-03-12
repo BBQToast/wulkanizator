@@ -18,15 +18,13 @@ namespace WpfApp1.Klasy
     class Baza_Pracownikow
     {
         public int ilosc { get; private set; }
-        public string nazwa_pliku;
-        public string lokacja_pliku;
+        public string lokalizacja { get; private set; }
 
         public List<Pracownik> pracownicy = new List<Pracownik>();
 
         public Baza_Pracownikow()
         {
-            nazwa_pliku = "Pracownicy";
-            lokacja_pliku = "";
+            lokalizacja = "Pracownicy";
             ilosc = 0;
         }
         public bool zapisz_pracownika (Pracownik pracownik)
@@ -98,18 +96,14 @@ namespace WpfApp1.Klasy
             }
             ilosc = pracownicy.Count;
         }
-        public string plik()
+        private string plik()
         {
-            string tmp;
-            if (lokacja_pliku == "")
-            {
-                tmp = "@" + nazwa_pliku + ".xml";
-            }
-            else
-            {
-                tmp = "@" + lokacja_pliku + "\\" + nazwa_pliku + ".xml";
-            }
-            return tmp;
+            return "@" + lokalizacja;
+        }
+
+        public void plik(string a)
+        {
+            lokalizacja = a;
         }
     }
 }
