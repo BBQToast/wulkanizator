@@ -29,8 +29,7 @@ namespace WpfApp1.Klasy
                 pracownicy.plik(lines[0]);
                 zdarzenia.plik(lines[1]);
 
-                pracownicy.odczyt();
-                zdarzenia.odczyt();
+                odczyt();
             }
             catch(Exception e)
             {
