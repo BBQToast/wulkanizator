@@ -18,6 +18,11 @@ namespace WpfApp1.Klasy
         public DateTime Data_zatrudnienia { get ; set ; }
         public DateTime Data_zakonczenia_pracy { get ; set; }
 
+        public Pracownik()
+        {
+            
+        }
+
         public bool Czy_aktywny ()
         {
             bool tmp = true;

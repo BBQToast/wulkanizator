@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SQLite;
 using System.Text;
 using System.Linq;
 using System.Collections;
@@ -26,6 +29,10 @@ namespace WpfApp1.Klasy
         {
             lokalizacja = "Pracownicy";
             ilosc = 0;
+        }
+        private static string polącz_z_baza (string id = "Baza")
+        {
+            return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
         public bool zapisz_pracownika (Pracownik pracownik)
         {
