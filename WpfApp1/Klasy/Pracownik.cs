@@ -18,12 +18,6 @@ namespace WpfApp1.Klasy
         public DateTime Data_zatrudnienia { get ; set ; }
         public DateTime Data_zakonczenia_pracy { get ; set; }
 
-        public Pracownik(int liczba)
-        {
-            ID = liczba;
-            Data_zatrudnienia = DateTime.Now;
-        }
-
         public bool Czy_aktywny ()
         {
             bool tmp = true;
